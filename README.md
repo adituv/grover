@@ -13,5 +13,5 @@ In quantum computation, an operation must be **unitary** to not collapse the
 wavefunction.  An operator is unitary if the product of the operator and its
 adjoint is equal to the identity operator:
 
-A^✝ = (A*)^T  -- The adjoint is the transpose of the complex conjugate
-AA^✝ = A^(✝)A = I -- To be unitary, the product must equal I 
+A^† = (A*)^T  -- The adjoint is the transpose of the complex conjugate
+AA^† = A^(†)A = I -- To be unitary, the product must equal I 
