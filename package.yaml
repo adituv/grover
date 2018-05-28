@@ -1,0 +1,22 @@
+name:                grover
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/AdituV/grover#readme
+license:             BSD3
+author:              Iris Ward
+maintainer:          aditu.venyhandottir@gmail.com
+copyright:           2018 Iris Ward
+category:            Web
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - diagrams
+  - linear
+
+executables:
+  grover:
+    source-dirs:      src
+    main:             Main.hs
