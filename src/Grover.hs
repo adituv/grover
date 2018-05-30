@@ -12,9 +12,15 @@ data GroverState = GroverState
   , current :: Vector Double
   } deriving Show
 
-defaultTarget :: Int -> Vector Double
-defaultTarget n = Vector.cons 1
-                $ Vector.replicate (2^n-1) 0
+mkTarget :: Int -> Int -> Vector Double
+mkTarget n a
+  | 2^n < a = error "Invalid target"
+  | otherwise =
+      Vector.concat
+        [ Vector.replicate a 0.0
+        , Vector.singleton 1.0
+        , Vector.replicate (2^n - a - 1) 0.0
+        ]
 
 initState :: Vector Double -> GroverState
 initState target = GroverState
